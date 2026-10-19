@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spoti'stat - Top 50 des musiques de Yanis</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-dark text-light">
+  <!-- Accueil -->
+  <section id="home" class="d-flex flex-column justify-content-center align-items-center vh-100 text-center">
+    <h1 class="display-1 text-success fw-bold">Spoti'stat</h1>
+    <button id="discoverBtn" class="btn btn-success mt-4">Découvrir</button>
+  </section>
+
+  <!-- Contenu principal -->
+  <main id="mainContent" class="container py-5">
+
+    <!-- Top 10 Artistes -->
+    <section>
+      <h2 class="text-success mb-4">Top 10 Artistes</h2>
+      <canvas id="artistChart"></canvas>
+    </section>
+
+    <!-- Genres les plus écoutés -->
+    <section class="mt-5">
+      <h2 class="text-success mb-4">Genres les plus écoutés</h2>
+      <div class="text-center text-white mb-3">genre musical</div>
+      <div class="row justify-content-center">
+      <div class="col-md-6">
+      <canvas id="genreChart"></canvas>
+    </div>
+    </div>
+  </section>
+
+    <!-- Barre de recherche -->
+    <section class="my-5">
+      <input type="text" id="searchBar" class="form-control" placeholder="Rechercher un morceau...">
+    </section>
+
+  <select id="filterSelect" class="form-select my-3" aria-label="Filtrer par">
+    <option value="default" selected>Classement (Top 50)</option>
+    <option value="artist">Artiste le plus écouté</option>
+    <option value="release">Date de sortie</option>
+    <option value="alpha">Ordre alphabétique</option>
+  </select>
+
+
+    <!-- Playlist -->
+    <section>
+      <h2 class="text-success mb-3">Top 50 des musiques de Yanis</h2>
+      <div id="playlist" class="list-group"></div>
+    </section>
+  </main>
+
+  <!-- Modale détails morceaux -->
+  <div class="modal fade" id="trackModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-secondary text-light">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" src="" alt="Pochette" class="img-fluid mb-3">
+          <p id="modalDetails"></p>
+          <a id="spotifyLink" href="#" target="_blank" class="btn btn-success">Ouvrir dans Spotify</a>
+          <a id="youtubeLink" href="#" target="_blank" class="btn btn-outline-light ms-2">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script/script.js"></script>
+</body>
+</html>

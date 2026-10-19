@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'Bangers';
+  src: url('../fonts/Bangers-Regular.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Bangers', cursive;
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+h1, h2, h3, .modal-title {
+  font-family: 'Bangers', cursive;
+}
+
+#home {
+  background-color: #121212;
+}
+
+#discoverBtn {
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+}
+
+.list-group-item {
+  background-color: #1e1e1e;
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.list-group-item img {
+  width: 64px;
+  height: 64px;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+.list-group-item .info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.list-group-item .info h5 {
+  margin: 0;
+  color: #28a745;
+}
+
+.list-group-item .info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.modal-content {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 1rem;
+}
+
+.modal-header, .modal-body {
+  border: none;
+}
+
+#searchBar {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #28a745;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.list-group-item:hover {
+  background-color: #434343;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
